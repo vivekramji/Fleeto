@@ -9,4 +9,6 @@ API used – Google Maps API v2, MapQuest Traffic API.
 
 User accounts were stored on the AWS EC2 Cloud.
 
-A working demo of the application can be seen on 
+A working demo of the application can be seen on https://www.youtube.com/watch?v=8O_5Zl1V4ws
+
+Refer to PDFs in the repo for more details. 
