@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimagecopy"
+    android:orientation="vertical" 
+    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:textColor="#FFFFFF"
+            android:text="Full Name:" />
+        <EditText 
+            android:id="@+id/fname"
+            android:background="@drawable/edittextstylev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:inputType="text" />"
+        
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:textColor="#FFFFFF"
+            android:text="Choose username:" />
+        <EditText 
+            android:id="@+id/uname"
+            android:background="@drawable/edittextstylev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:textColor="#FFFFFF"
+            android:text="Choose password:" />
+        <EditText 
+            android:id="@+id/pword"
+            android:background="@drawable/edittextstylev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:inputType="textPassword"/>
+        
+         <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:textColor="#FFFFFF"
+            android:text="Confirm password:" />
+        <EditText 
+            android:id="@+id/cpword"
+            android:background="@drawable/edittextstylev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40sp"
+            android:layout_marginLeft="40sp"
+            android:padding="5sp"
+            android:inputType="textPassword"/>
+        <Button 
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="20sp"
+             android:layout_marginRight="50sp"
+            android:layout_marginLeft="50sp"
+            android:text="Submit"
+            />"
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>

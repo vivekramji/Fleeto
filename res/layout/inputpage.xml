@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/myLinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundimagecopy"
+    
+    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Carrier IATA Code:"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="18sp" 
+            android:padding="2sp" />
+ 
+    <EditText
+        android:id="@+id/fieldCarrier"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        
+        android:background="@drawable/edittextstylev"
+        android:ems="10"
+        android:hint="E.g. AI, EK, AA, etc"
+        android:inputType="textCapCharacters"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Flight ID:"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="18sp" 
+            android:padding="2sp" />
+    
+    <EditText
+        android:id="@+id/fieldFlightID"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        
+        android:background="@drawable/edittextstylev"
+        android:ems="10"
+        android:hint="E.g. 208, 1025, etc"
+        android:inputType="number"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose the journey date:"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="18sp" 
+            android:padding="2sp" />
+    <Spinner
+        android:id="@+id/date"
+        android:background="@drawable/edittextstylev"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+      
+        android:padding="5sp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/fieldSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittextstylev"
+        android:fadingEdge="vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:linksClickable="false"
+        android:onClick="verifyFlightID"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:text="SUBMIT"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/fieldCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edittextstylev"
+        android:fadingEdge="vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:linksClickable="false"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="CLEAR"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

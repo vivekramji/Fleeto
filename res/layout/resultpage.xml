@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF0FD"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/refresh"
+            android:layout_alignTop="@+id/refresh"
+            android:background="#156A8E"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="Summary of the trip"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10sp"
+            android:background="@drawable/refresh"
+            android:padding="4sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/tvt_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/header1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="10sp"
+                android:background="#156A8E"
+                android:gravity="center"
+                android:text="Flight Details:"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/flightH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="38sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Flight:  "
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/flightV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/airlineH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="38sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Carrier:"
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/airlineV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/dateH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="38sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Date:    "
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dateV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/airportH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="38sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Airport:"
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/airportV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/scheduledH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Scheduled\nDept Time:"
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/scheduledV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/estimatedH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Estimated\nDept Time:"
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/estimatedV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/terminalH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="12sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:text="Departure\nTerminal:"
+                        android:textColor="#394F59"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/terminalV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8sp"
+                        android:layout_marginRight="8sp"
+                        android:layout_marginTop="8sp"
+                        android:background="#FFFFFF"
+                        android:padding="8sp"
+                        android:textColor="#394F59"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/header2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="10sp"
+                android:background="#156A8E"
+                android:gravity="center"
+                android:text="Delay Statistics"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:layout_marginStart="8sp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/statusH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8sp"
+                    android:background="#FFFFFF"
+                    android:padding="8sp"
+                    android:text="Delayed by:"
+                    android:textColor="#394F59"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/statusV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8sp"
+                    android:background="#FFFFFF"
+                    android:padding="8sp"
+                    android:textColor="#394F59"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/header3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:layout_marginStart="8sp"
+                android:layout_marginTop="8sp"
+                android:background="#FFFFFF"
+                android:paddingBottom="8sp"
+                android:paddingEnd="8sp"
+                android:paddingLeft="16sp"
+                android:paddingRight="8sp"
+                android:paddingStart="16sp"
+                android:paddingTop="8sp"
+                android:text="Time left:"
+                android:textColor="#394F59"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/displayDelay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="5sp"
+                android:textColor="#394F59"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/header4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="8sp"
+                android:text="(DD:HH:MM)"
+                android:textColor="#394F59"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+           
+
+            <TextView
+                android:id="@+id/forecastH"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="8sp"
+                android:text="Forecasted Trip Delay Due To Future Climatic Conditions:"
+                android:textColor="#FF0000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/forecastV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="8sp"
+                android:textColor="#FF0000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/climatebutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                
+                android:text="Check Climate"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/startbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:text="Start Navigation"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+				android:textSize="18sp"
+                android:text="Get real-time data"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

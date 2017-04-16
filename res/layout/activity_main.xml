@@ -1,0 +1,119 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            tools:context=".MainActivity" >
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.googlemapslocalservice.MainActivity" />
+
+            <ToggleButton
+                android:id="@+id/follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/toggleIcon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="true"
+                android:text="Nav"
+                android:textOff="Nav"
+                android:textOn="Nav" />
+
+            <ToggleButton
+                android:id="@+id/toggleIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/toggleTraffic"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="true"
+                android:textOff="Icons"
+                android:textOn="Icons" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/edittextstyle"
+                android:entries="@array/country_arrays"
+                android:prompt="@string/map_prompt" />
+
+            <ToggleButton
+                android:id="@+id/toggleTraffic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner1"
+                android:layout_alignEnd="@+id/toggleIcon"
+                android:layout_alignLeft="@+id/toggleIcon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/toggleIcon"
+                android:layout_alignStart="@+id/toggleIcon"
+                android:checked="true"
+                android:textOff="Traffic"
+                android:textOn="Traffic" />
+
+            <TextView
+                android:id="@+id/DistTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/toggleTraffic"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="3sp"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#000000"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/reroute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Re-Calculate" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/slidermenu"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:background="#ffeeeeee"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        
+        android:textSize="28sp"
+        android:typeface="serif"
+        android:dividerHeight="1dp" >
+
+      
+    </TextView>
+
+</android.support.v4.widget.DrawerLayout>
